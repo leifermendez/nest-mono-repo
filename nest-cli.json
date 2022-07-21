@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/monorepo-nest/src",
+  "monorepo": true,
+  "root": "apps/monorepo-nest",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/monorepo-nest/tsconfig.app.json"
+  },
+  "projects": {
+    "monorepo-nest": {
+      "type": "application",
+      "root": "apps/monorepo-nest",
+      "entryFile": "main",
+      "sourceRoot": "apps/monorepo-nest/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/monorepo-nest/tsconfig.app.json"
+      }
+    },
+    "mailapp": {
+      "type": "application",
+      "root": "apps/mailapp",
+      "entryFile": "main",
+      "sourceRoot": "apps/mailapp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mailapp/tsconfig.app.json"
+      }
+    }
+  }
+}
